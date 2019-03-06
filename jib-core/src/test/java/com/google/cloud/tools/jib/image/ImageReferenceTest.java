@@ -212,4 +212,9 @@ public class ImageReferenceTest {
     Assert.assertEquals(expectedRepository, imageReference.getRepository());
     Assert.assertEquals(expectedTag, imageReference.getTag());
   }
+
+  @Test
+  public void testIsValidTag_null() {
+    Assert.assertFalse(ImageReference.isValidTag(null));
+  }
 }

@@ -198,7 +198,7 @@ public class ImageReference {
    * @return {@code true} if is a valid tag; {@code false} otherwise
    */
   public static boolean isValidTag(String tag) {
-    return tag.matches(TAG_REGEX) || tag.matches(DescriptorDigest.DIGEST_REGEX);
+    return tag != null && (tag.matches(TAG_REGEX) || tag.matches(DescriptorDigest.DIGEST_REGEX));
   }
 
   /**
